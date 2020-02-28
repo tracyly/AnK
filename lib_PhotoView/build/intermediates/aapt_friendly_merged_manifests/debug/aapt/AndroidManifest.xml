@@ -4,8 +4,12 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
     <application
-        android:hardwareAccelerated="true" 
-        android:allowBackup="true"/>
+        android:allowBackup="true"
+        android:hardwareAccelerated="true" />
 
 </manifest>

@@ -1,6 +1,10 @@
 package com.rundasoft.photoview;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -20,7 +24,7 @@ import uk.co.senab.photoview.PhotoView;
  *  注意=====================
  *  用本地类库没问题 ,但是用gradle依赖图片无法缩小只能放大...
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     String imgUri = "http://cdn.liziyd.com/8BA31A9A7277496FB29C4DD422AEFE45_聂卫平围棋道场名师课堂-进阶课-专业自主-500-296.jpg";
 
@@ -29,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         photoView = findViewById(R.id.photoView);
 

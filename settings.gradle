@@ -1,1 +1,1 @@
-include ':permissionsdispatcher', ':photoview', ':lib_PhotoView'
+include ':permissionsdispatcher', ':photoview', ':lib_PhotoView', ':coordinatorlayoutstudy', ':gsyvideoplayer', ':Umpush'
